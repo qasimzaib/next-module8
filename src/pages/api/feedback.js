@@ -1,11 +1,11 @@
 import fs from "fs";
 import path from "path";
 
-function buildFilePath() {
+export function buildFilePath() {
 	return path.join(process.cwd(), "data", "feedback.json");
 }
 
-function extractFeedbackData(filePath) {
+export function extractFeedbackData(filePath) {
 	const fileData = fs.readFileSync(filePath);
 	const data = JSON.parse(fileData);
 	return data;
